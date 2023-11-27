@@ -9,7 +9,7 @@ const categoryBox = document.getElementById("select-products-categories");
 function pintarListaProductos() {
     const productsBox = document.getElementById("products-box");
     let contenido = "";
-    for (i = 0; i < productosFiltrados.length; i++) {
+    for (let i = 0; i < productosFiltrados.length; i++) {
         const product = productosFiltrados[i];
         contenido += `
             <article class="thecard">
@@ -37,7 +37,7 @@ function pintarListaProductos() {
                     <div>
                         <div class="card-values">
                             <div class="card-age">${product.detais}</div>
-                            <div class="card-price-back">${product.price}.-</div>
+                            <div class="card-price-back">$${product.price}.-</div>
                         </div>
                         <footer class="card-footer">
                             <a href="#" class="card-btn-vm-back">Ver mas</a>
