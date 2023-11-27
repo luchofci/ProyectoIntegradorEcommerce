@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/js/adminGuard.js"></script>
+
+    <title>PetShop by Tabu y Odin</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/product-admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- <script src="/js/main.js" defer></script> -->
+    <script src="/js/header.js" defer></script>
+    <script src="/js/formatDate.js" defer></script>
+    <script src="/js/product-admin.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+
+</head>
+
+<body>
+
+    <header class="main-header">
+        <input class="input-check" type="checkbox" id="check-menu">
+
+        <label class="burger-menu" for="check-menu">
+
+            <div class="burger-icon">
+                <i class="fa-solid fa-paw"></i>
+            </div>
+
+        </label>
+
+        <a class="logo-link" href="/index.html">
+            <img class="nav-logo" src="/assets/images/logo-no-background.png" alt="logo-img">
+        </a>
+
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.html">Home</a>
+
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/register/register.html">Registro</a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/contact/contact.html">Contacto</a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/about-us/about-us.html">Nosotros</a>
+
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/adopcion/adopcion.html">"ADOPTA"</a>
+
+                </li>
+            </ul>
+
+        </nav>
+
+
+        <div class="user-info" id="header-user">
+            <div class="user-menu-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <div class="user-data"></div>
+
+            <div class="user-action"></div>
+        </div>
+
+
+
+    </header>
+
+    <!-- /* 
+    ==========FIN HEADER=====================================
+    =========START MAIN SECTION===============================
+    ================================================= */ -->
+    <main class="main-container">
+        <h1 class="main-title">Lista de Productos</h1>
+
+        <div class="body-container">
+            <div class="product-data-container">
+                
+                
+                <form class="product-data-form" id="product-data-form" onsubmit="submitProductDataForm(event)">
+                    <input type="hidden" id="productId" name="productId">
+                    
+                    <div class="input-group">
+                        <label for="image">Url de la imagen</label>
+                        <input type="url" name="image" id="image" placeholder="http:/......">
+                    </div>
+                    
+                
+                    <div class="input-group">
+                        <label for="inputName">Front Name Product</label><br>
+                        <input type="text" name="inputNameFront" id="inputNameFront" title="Ingrese Nombre Completo"
+                            placeholder="Nombre Producto" minlength="1" maxlength="50" autofocus required >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="">Front Description</label><br>
+                        <textarea 
+                            name="frontDescription"
+                            id="frontDescription" 
+                            cols="25" 
+                            rows="4">
+                        </textarea>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="inputName">Back Name Product</label><br>
+                        <input type="text" name="inputNameBack" id="inputNameBack" title="Ingrese Nombre Completo"
+                            placeholder="Nombre Producto Back" minlength="4" maxlength="50" autofocus required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="">Back Description</label><br>
+                        <textarea 
+                            name="backDescription" 
+                            id="backDescription" 
+                            cols="25" 
+                            rows="4">
+                        </textarea>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="precio">Precio:</label>
+                        <input type="number" id="precio" name="precio" step="0.01" required>
+                    </div>
+
+
+
+
+
+                    
+                    
+                    <div class="input-group">
+                        <label for="detalles">Detalles del Producto:</label>
+                        <textarea id="detalles" name="detalles" rows="4" required></textarea>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="categoria">Categoría:</label>
+                        <select id="categoria" name="categoria" required>
+                            <option value="productosSecos">Alimento Seco para Gatos</option>
+                            <option value="productosHumedos">Alimento humedo para Gatos</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="numero_orden">Número de Orden:</label>
+                        <input type="text" id="numeroOrden" name="numeroOrden" required>
+                    </div>
+
+
+
+                    <div class="input-group">
+                        <label for="stock">Cantidad de Stock:</label>
+                        <input type="number" id="stock" name="stock" required>
+                    </div>
+
+
+
+
+
+
+                    <div>
+                        <button id="product-data-form-submit-btn" class="btn-form" type="submit">Agregar Producto</button>
+
+                    </div>
+
+
+                </form>
+
+            </div>
+
+
+
+
+
+
+            <div class="table-product-container">
+                <table class="primary-table">
+                    <thead>
+                        <tr class="table-head">
+                            <th>Image</th>
+                            <th>ID</th>
+                            <th>Front Name Product</th>
+                            <th>Front Description</th>
+                            <th>Back Name Product</th>
+                            <th>Back Description</th>
+                            <th>Price</th>
+                            <th>Details</th>
+                            <th>Category</th>
+                            <th>Order</th>
+                            <th>Stock</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="product-table-body" id="product-table-body">
+                        <tr>
+                            <td>
+                                <img class="table-product-img"
+                                src="/assets/images/products/Royal Canin Mother & baby cat.png"
+                                alt="">
+                            </td>
+                            <td>ID</td>
+                            <td>Mother & Babycat</td>
+                            <td>"Alimento seco para gatitos en su primera etapa de crecimiento (de 1 a 4 meses de edad) y durante el período de destete. Tambien indicado para gatas gestantes o en período de lactancia."</td>
+                            <td>"Especial para facilitar el destete"</td>
+                            <td>"Entre las 4 y las 12 semanas después del nacimiento, la inmunidad proporcionada de forma natural por el calostro de la madre disminuye progresivamente. Mother & Babycat ayuda a reforzar las defensas naturales del gatito en su primera etapa de crecimiento, gracias a un exclusivo complejo de antioxidantes, que incluye vitamina E."</td>
+                            <td>6900</td>
+                            <td>"De 1 a 4 meses de edad"</td>
+                            <td>productosSecos</td>
+                            <td>1</td>
+                            <td>20</td>
+                            <td>
+                                <button>Borrar</button>
+                                <button>Modificar</button>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+    </main>
+
+    <!-- /* 
+    ===============================================
+    ========= MAIN SECTION END===============================
+    
+    ==========START FOOTER SECTION====================== */ -->
+
+
+
+
+    <footer class="main-footer">
+        <section class="footer-section1">
+            <div>Direcciones a Jardín Botánico - Av. Las Heras 4164-4238 (Distrito Federal)
+                <p class="telefono"> Tel: 11.1.234.5478 </p>
+            </div>
+        </section>
+        <section class="footer-section2">
+            <div>
+                <img class="footer-logo" src="/assets/images/logo-no-background.png" alt="Footer Logo">
+            </div>
+        </section>
+        <section class="footer-section3">
+            <div>
+                <a class="footer-link" href="">
+                    <img class="logo-IG" src="/assets/images/FOTO IG TRANSPARENTE 2.png" alt="logo-insta">
+                    @PetShopbyTabuyOdin
+                </a>
+            </div>
+            <div>
+                <a class="footer-link" href="">
+                    <img class="logo-YT" src="/assets/images/FOTO YT LOGO2.png" alt="logo-youtube"> @PetShopbyTabuyOdin
+                </a>
+            </div>
+            <div>
+                <a class="footer-link" href="">
+                    <img class="logo-FB" src="/assets/images/FOTO FB TRANSPARENTE4 .png" alt="logo-fb">
+                    @PetShopbyTabuyOdin
+                </a>
+            </div>
+
+        </section>
+    </footer>
+
+
+
+
+</body>
+
+</html>

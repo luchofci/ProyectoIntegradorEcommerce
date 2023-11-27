@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="/js/main.js" defer></script>
+    <script src="/js/header.js" defer></script>
+    <script src="/js/register.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+
+
+</head>
+<body>
+
+    <header class="main-header">
+        <input class="input-check" type="checkbox" id="check-menu">
+
+        <label class="burger-menu" for="check-menu">
+
+            <div class="burger-icon">
+                <i class="fa-solid fa-paw"></i>
+            </div>
+
+        </label>
+
+        <a class="logo-link" href="/index.html">
+            <img class="nav-logo" src="/assets/images/logo-no-background.png" alt="logo-img">
+        </a>
+
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.html">Home</a>
+
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/register/register.html">Registro</a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/contact/contact.html">Contacto</a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/about-us/about-us.html">Nosotros</a>
+
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/pages/adopcion/adopcion.html">"ADOPTA"</a>
+
+                </li>
+            </ul>
+            
+        </nav>
+
+
+        <div class="user-info" id="header-user">
+            <div class="user-menu-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <div class="user-data"></div>
+
+            <div class="user-action"></div>
+        </div>
+
+        
+
+    </header>
+<!-- /* 
+    ==========FIN HEADER=====================================
+    =========START MAIN SECTION===============================
+    ================================================= */ -->
+    <div class="formulario-container">
+    <h1>REGISTRO DE USUARIO</h1>
+    
+    <form class="user-register-form" id="user-register-form" onsubmit="submitUserRegisterForm(event)">
+        <div class="input-group">
+            <label for="inputName">Nombre Completo</label><br>
+            <input 
+                type="text" 
+                name="inputName" 
+                id="inputName" 
+                title="Ingrese Nombre Completo"
+                placeholder="John Doe"
+                minlength="4"
+                maxlength="50"
+                pattern="^[a-zA-Z]+( [a-zA-Z])*$"  
+                autofocus
+                required>
+                
+        </div>
+
+        <div class="input-group">
+            <label for="inputCorreo">Correo Electronico</label><br>
+            <input 
+                type="email"
+                name="inputCorreo"
+                id="inputCorreo"
+                minlength="6"
+                maxlength="140"
+                placeholder="Johndoe@gmail.com"
+                pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,4}$"
+                required>
+        </div>
+
+        <div class="input-group">
+            <label for="inputPassword">Contraseña</label><br>
+            <input 
+                type="password"
+                name="inputPassword"
+                id="inputPassword"
+                minlength="5"
+                maxlength="20"
+                title="Debe tener entre 5 a 20 Caracteres y al menos 1 de cada elemento 'A-Z / Symbols / Numbers'"
+                placeholder="********"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                required>
+        </div>
+
+        <div class="input-group">
+            <label for="inputPassword2">Repetir Contraseña</label><br>
+            <input 
+                type="password"
+                name="inputPassword2"
+                id="inputPassword2"
+                minlength="5"
+                maxlength="20"
+                title="Debe tener minimo 5 Caracteres y al menos 1 de cada elemento 'A-Z / Symbols / Numbers'"
+                placeholder="********"
+                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                required>
+        </div>
+
+        <div class="input-group">
+            <label for="inputDate">Fecha de Nacimiento</label><br>
+            <input 
+                type="date"
+                name="inputDate"
+                id="inputDate"
+                min="1900-01-01"
+                max="2024-01-01">
+        </div>
+
+        <div class="input-group">
+            <label for="inputPais">Seleccione su provincia</label><br>
+            <select name="pais" id="inputPais" required>
+                <option value="buenos_aires">Buenos Aires</option>
+                <option value="capital_federal">Capital Federal</option>
+                <option value="catamarca">Catamarca</option>
+                <option value="chaco">Chaco</option>
+                <option value="chubut">Chubut</option>
+                <option value="cordoba">Cordoba</option>
+                <option value="corrientes">Corrientes</option>
+                <option value="entre_rios">Entre Rios</option>
+                <option value="formosa">Formosa</option>
+                <option value="jujuy">Jujuy</option>
+                <option value="la_pampa">La Pampa</option>
+                <option value="la_rioja">La Rioja</option>
+                <option value="mendoza">Mendoza</option>
+                <option value="misiones">Misiones</option>
+                <option value="neuquen">Neuquen</option>
+                <option value="rio_negro">Rio Negro</option>
+                <option value="salta">Salta</option>
+                <option value="san_juan">San Juan</option>
+                <option value="san_luis">San Luis</option>
+                <option value="santa_cruz">Santa Cruz</option>
+                <option value="santa_fe">Santa Fe</option>
+                <option value="santiago_del_estero">Santiago del Estero</option>
+                <option value="tierra_del_fuego">Tierra del Fuego</option>
+                <option value="tucuman">Tucuman</option>
+            </select>
+        </div>
+
+        <div class="input-group"> 
+            <label for="">Observacion</label><br>
+            <textarea 
+                name="observacion" 
+                id="" 
+                cols="50" 
+                rows="4">
+            </textarea>
+        </div>
+
+
+        <div>
+            <button type="submit">Registrarse</button>
+            
+        </div>
+
+
+    </form>
+    <br>
+    <br>
+</div>
+
+
+
+<!-- /* 
+    ==========FIN MAIN=====================================
+    =========START FOOTER SECTION===============================
+    ================================================= */ -->
+
+    <footer class="main-footer">
+        <section class="footer-section1">
+            <div>Direcciones a Jardín Botánico - Av. Las Heras 4164-4238 (Distrito Federal)
+            <p class="telefono" >  Tel: 11.1.234.5478 </p>
+            </div>
+        </section>
+        <section class="footer-section2">
+            <div>
+                <img class="footer-logo"
+                    src="/assets/images/logo-no-background.png" alt="Footer Logo">
+            </div>
+        </section>
+        <section class="footer-section3">
+            <div>
+                <a  class="footer-link"
+                    href="">
+                    <img class="logo-IG"
+                    src="/assets/images/FOTO IG TRANSPARENTE 2.png" alt="logo-insta"> @PetShopbyTabuyOdin
+                </a>
+            </div>
+            <div>
+                <a  class="footer-link"
+                    href="">
+                    <img class="logo-YT"
+                        src="/assets/images/FOTO YT LOGO2.png" alt="logo-youtube"> @PetShopbyTabuyOdin
+                </a>
+            </div>
+            <div>
+                <a  class="footer-link" 
+                    href="">
+                    <img class="logo-FB"
+                    src="/assets/images/FOTO FB TRANSPARENTE4 .png" 
+                        alt="logo-fb"> @PetShopbyTabuyOdin
+                </a>
+            </div>
+    
+        </section>
+    </footer>
+
+</body>
+</html>
