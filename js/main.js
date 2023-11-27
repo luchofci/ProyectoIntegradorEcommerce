@@ -77,10 +77,11 @@ const productsSeed = [
     description2: "Entre las 4 y las 12 semanas después del nacimiento, la inmunidad proporcionada de forma natural por el calostro de la madre disminuye progresivamente. Mother & Babycat ayuda a reforzar las defensas naturales del gatito en su primera etapa de crecimiento, gracias a un exclusivo complejo de antioxidantes, que incluye vitamina E.",
     price: 6900,
     detais: "De 1 a 4 meses de edad",
-    imageUrl: "/assets/images/products/Royal Canin Mother & baby cat.png",
-    category: productsCategories.productosSecos,
+    // imageUrl: "/assets/images/products/Royal Canin Mother & baby cat.png",
+    imageUrl: "https://github.com/luchofci/ProyectoIntegradorEcommerce/blob/main/assets/images/products/Royal%20Canin%20Mother%20&%20baby%20cat.png?raw=true",
+    category: "productosSecos",
     order: 0,
-    active: true
+    active: 5
 },
 {
     id: crypto.randomUUID(),
@@ -91,9 +92,9 @@ const productsSeed = [
     price: 7500,
     detais: "De 4 a 12 meses de edad",
     imageUrl: "/assets/images/products/Royal Canin Kitten.png",
-    category: productsCategories.productosSecos,
+    category: "productosSecos",
     order: 1,
-    active: true
+    active: 3
 },
 {
     id: crypto.randomUUID(),
@@ -104,9 +105,9 @@ const productsSeed = [
     price: 1500,
     detais: "De 4 a 12 meses de edad",
     imageUrl: "/assets/images//products/Royal Canin Kitten humedo.png",
-    category: productsCategories.productosHumedos,
+    category: "productosHumedos",
     order: 2,
-    active: true
+    active: 3
 },
 {
     id: crypto.randomUUID(),
@@ -117,9 +118,9 @@ const productsSeed = [
     price: 8900,
     detais: "Desde 1 año de edad",
     imageUrl: "/assets/images/products/Royal Canin Indoor.png",
-    category: productsCategories.productosSecos,
+    category: "productosSecos",
     order: 3,
-    active: true
+    active: 6
 },
 {
     id: crypto.randomUUID(),
@@ -130,9 +131,9 @@ const productsSeed = [
     price: 6890,
     detais: "A partir de los 7 años de edad",
     imageUrl: "/assets/images/products/Royal Canin Indoor+7.png",
-    category: productsCategories.productosSecos,
+    category: "productosSecos",
     order: 4,
-    active: true
+    active: 8
 },
 {
     id: crypto.randomUUID(),
@@ -143,9 +144,9 @@ const productsSeed = [
     price: 2950,
     detais: "A partir de los 7 años de edad",
     imageUrl: "/assets/images//products/Royal Canin Instinctive 7+.png",
-    category: productsCategories.productosHumedos,
+    category: "productosHumedos",
     order: 5,
-    active: true
+    active: 2
 },
 {
     id: crypto.randomUUID(),
@@ -156,9 +157,9 @@ const productsSeed = [
     price: 7800,
     detais: "A partir de los 12 meses de edad",
     imageUrl: "/assets/images//products/Royal Canin Siames.png",
-    category: productsCategories.productosSecos,
+    category: "productosSecos",
     order: 6,
-    active: true
+    active: 4
 },
 {
     id: crypto.randomUUID(),
@@ -169,9 +170,9 @@ const productsSeed = [
     price: 11999,
     detais: "A partir de los 12 meses de edad",
     imageUrl: "/assets/images/products/Royal Canin Persian.png",
-    category: productsCategories.productosSecos,
+    category: "productosSecos",
     order: 7,
-    active: true
+    active: 468
 },
 ]
 
@@ -194,13 +195,12 @@ localStorage.setItem("currentUser", JSON.stringify(null));
 //Obtener Lo0s d atos del LocalStorage y guardarlos en variables global.
 let users = localStorage.getItem("userList");
 let products = localStorage.getItem("productList");
-let currentUser = localStorage.getItem("currentUser");
+currentUser = localStorage.getItem("currentUser");
 
 //converti en obj.(Como me los traigo en string, los convierto en obj)
 users = JSON.parse(users);
 products = JSON.parse(products);
 currentUser = JSON.parse(currentUser)
 
-console.log("currentUser", currentUser)
 
 
