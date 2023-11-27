@@ -1,9 +1,8 @@
 const productTableBody = document.getElementById('product-table-body');
 const productDataForm = document.getElementById('product-data-form');
 const productDataFormSubmitBtn = document.getElementById('product-data-form-submit-btn')
+const titulo = document.querySelector("h1")
 //variable global que viene de main
-let products = JSON.parse(localStorage.getItem("productList"));
-
 let filteredProducts = products;
 
 function pintarTablaDeProductos() {
@@ -23,7 +22,7 @@ function pintarTablaDeProductos() {
             <td>${product.description2}</td>
             <td>${product.price}</td>
             <td>${product.detais}</td>
-            <td>${product.category}</td>
+            <td>${productsCategories[product.category]}</td>
             <td>${product.order}</td>
             <td>${product.active}</td>
             <td>
@@ -57,7 +56,7 @@ function onClickEditProduct(productId){
     el.inputNameFront.value = selectedProduct.title1;
     el.frontDescription.value = selectedProduct.description1;
     el.inputNameBack.value = selectedProduct.title2;
-    el.backDescription.vale = selectedProduct.description2;
+    el.backDescription.value = selectedProduct.description2;
     el.precio.value = selectedProduct.price;
     el.detalles.value = selectedProduct.detais;
     el.categoria.value = selectedProduct.category;
@@ -65,7 +64,7 @@ function onClickEditProduct(productId){
     el.stock.value = selectedProduct.active;
 
     productDataFormSubmitBtn.classList.add('btn-edit');
-
+    titulo.scrollIntoView({ behavior: 'smooth' })
     productDataFormSubmitBtn.innerText = 'Editar producto';
 
 };
@@ -80,7 +79,7 @@ function submitProductDataForm(evt){
     const title1 = el.inputNameFront.value;
     const description1 = el.frontDescription.value;
     const title2 = el.inputNameBack.value;
-    const description2 =  el.backDescription.vale;
+    const description2 =  el.backDescription.value;
     const price =  el.precio.value;
     const detais = el.detalles.value;
     const category =  el.categoria.value;
