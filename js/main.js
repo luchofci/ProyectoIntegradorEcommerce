@@ -91,7 +91,7 @@ const productsSeed = [
     description2: "Royal Canin Kitten brinda una tolerancia digestiva reforzada, ayuda a reforzar el sistema inmunológico del gatito y contribuye a un crecimiento saludable. <br> Durante este período clave, el sistema inmunológico del gatito se desarrolla progresivamente. Kitten ayuda a reforzar las defensas naturales del gatito en su segunda etapa de crecimiento, gracias en particular a un complejo patentado de antioxidantes, que incluye vitamina E.",
     price: 7500,
     detais: "De 4 a 12 meses de edad",
-    imageUrl: "/assets/images/products/Royal Canin Kitten.png",
+    imageUrl: "https://github.com/luchofci/ProyectoIntegradorEcommerce/blob/main/assets/images/products/Royal%20Canin%20Kitten.png?raw=true",
     category: "productosSecos",
     order: 1,
     active: 3
@@ -104,7 +104,7 @@ const productsSeed = [
     description2: "Trocitos de tamaño, textura y sabor óptimos para gatitos en    crecimiento.<br> Ayuda al desarrollo del sistema inmunitario saludable del gatito con un complejo científicamente probado que incluye vitaminas E y C. <br> Enriquecido con ácidos grasos omega-3 (DHA), para ayudar al desarrollo saludable del cerebro del gatito y ayudar a promover una visión saludable.",
     price: 1500,
     detais: "De 4 a 12 meses de edad",
-    imageUrl: "/assets/images//products/Royal Canin Kitten humedo.png",
+    imageUrl: "https://github.com/luchofci/ProyectoIntegradorEcommerce/blob/main/assets/images/products/Royal%20Canin%20Kitten%20humedo.png?raw=true",
     category: "productosHumedos",
     order: 2,
     active: 3
@@ -117,7 +117,7 @@ const productsSeed = [
     description2: "Un tenor moderado de grasa ayuda a mantener un peso saludable, adaptado a las necesidades de los gatos con niveles bajos de actividad que viven en el interior del hogar. <br> La falta de ejercicio puede conducir a un tránsito intestinal más lento, y dar lugar a una mala calidad de heces muy olorosas. Indoor contiene proteínas de alta digestibilidad (L.I.P.*) para ayudar a reducir la cantidad y el olor fecal. Indoor ayuda a estimular el tránsito intestinal y a eliminar los pelos ingeridos, gracias a fibras específicas.",
     price: 8900,
     detais: "Desde 1 año de edad",
-    imageUrl: "/assets/images/products/Royal Canin Indoor.png",
+    imageUrl: "https://github.com/luchofci/ProyectoIntegradorEcommerce/blob/main/assets/images/products/Royal%20Canin%20Indoor.png?raw=true",
     category: "productosSecos",
     order: 3,
     active: 6
@@ -130,7 +130,7 @@ const productsSeed = [
     description2: "Para ayudar a los gatos frente a los primeros signos del envejecimiento y mantener la vitalidad después de los 7 años. Indoor 7+ está formulado con un adecuado balance de vitaminas y minerales. Su fórmula está enriquecida con nutrientes que contribuyen al envejecimiento saludable. <br>  Una disminución de la función renal es común en los gatos después de los 7 años de edad. Indoor 7+ contiene un aporte adaptado de fósforo para contribuir al mantenimiento de la función renal.",
     price: 6890,
     detais: "A partir de los 7 años de edad",
-    imageUrl: "/assets/images/products/Royal Canin Indoor+7.png",
+    imageUrl: "https://github.com/luchofci/ProyectoIntegradorEcommerce/blob/main/assets/images/products/Royal%20Canin%20Indoor%2B7.png?raw=true",
     category: "productosSecos",
     order: 4,
     active: 8
@@ -143,7 +143,7 @@ const productsSeed = [
     description2: "Formulado para responder al Perfil Macro Nutricional Óptimo preferido instintivamente por los gatos adultos. <br> Especialmente desarrollado para una palatabilidad excepcional y moderado en energía.",
     price: 2950,
     detais: "A partir de los 7 años de edad",
-    imageUrl: "/assets/images//products/Royal Canin Instinctive 7+.png",
+    imageUrl: "https://github.com/luchofci/ProyectoIntegradorEcommerce/blob/main/assets/images/products/Royal%20Canin%20Instinctive%207%2B.png?raw=true",
     category: "productosHumedos",
     order: 5,
     active: 2
@@ -156,7 +156,7 @@ const productsSeed = [
     description2: "Esta croqueta, especialmente desarrollada en forma de tubo, facilita su prensión y estimula la masticación, contribuyendo a disminuir la velocidad de ingesta de alimento. Contiene una combinación de nutrientes específicos, incluyendo aminoácidos, vitaminas y ácidos grasos omega 3 y 6, que ayudan a mantener una piel saludable y pelaje brillante. Los altos niveles de proteínas (38%) y una cantidad moderada de grasas (16%) contribuyen a preservar la silueta esbelta y musculosa del gato Siamés. Fórmula enriquecida con L-carnitina. Contiene proteínas de alta digestibilidad (L.I.P.) y prebióticos que ayudan a promover una flora intestinal balanceada para una buena salud digestiva.",
     price: 7800,
     detais: "A partir de los 12 meses de edad",
-    imageUrl: "/assets/images//products/Royal Canin Siames.png",
+    imageUrl: "https://github.com/luchofci/ProyectoIntegradorEcommerce/blob/main/assets/images/products/Royal%20Canin%20Siames.png?raw=true",
     category: "productosSecos",
     order: 6,
     active: 4
@@ -169,7 +169,7 @@ const productsSeed = [
     description2: "Un exclusivo complejo de nutrientes que contribuye al mantenimiento de la barrera cutánea, la salud de la piel y la belleza del pelaje. Fórmula enriquecida con ácidos grasos Omega 3 y Omega 6. Una combinación de fibras específicas que ayuda naturalmente a estimular el tránsito intestinal y a reducir la formación de bolas de pelo. Formulado con proteínas de alta digestibilidad (L.I.P), un óptimo contenido de fibras y prebióticos que ayudan a promover una flora intestinal balanceada dando soporte a la salud digestiva.",
     price: 11999,
     detais: "A partir de los 12 meses de edad",
-    imageUrl: "/assets/images/products/Royal Canin Persian.png",
+    imageUrl: "https://github.com/luchofci/ProyectoIntegradorEcommerce/blob/main/assets/images/products/Royal%20Canin%20Persian.png?raw=true",
     category: "productosSecos",
     order: 7,
     active: 468
