@@ -20,7 +20,7 @@ function pintarTablaDeProductos() {
             <td>${product.description1}</td>   
             <td>${product.title2}</td>
             <td>${product.description2}</td>
-            <td>${product.price}</td>
+            <td>$${product.price}</td>
             <td>${product.detais}</td>
             <td>${productsCategories[product.category]}</td>
             <td>${product.order}</td>
