@@ -1,0 +1,96 @@
+.formulario-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 3rem;
+}
+
+.main-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+
+h1{
+    background: radial-gradient(circle, var(--dark-color) 0%, var(--light-color));
+    text-align: center;
+    color: transparent;
+    -webkit-background-clip: text;
+    font-size: 2.5rem;
+    
+}
+
+label{
+    color: var(--primery-color);
+}
+
+input{
+    border-bottom: 1px solid var(--dark-color);
+    background-color: var(--light-color);
+    color:  black;
+    width: 15rem;
+    height: 1.75rem;    
+    border-radius: 4px;
+    margin-bottom: .25rem;
+}
+select{
+    border-bottom: 1px solid var(--dark-color);
+    background-color: var(--light-color);
+    color: black;
+    width: 100%;
+    border-radius: 4px;
+}
+input:hover{
+    border-color: var(--dark-color);
+    outline: none;
+}
+textarea:hover{
+    border-color: var(--dark-color);
+    outline: none;
+}
+select:hover{
+    border-color: var(--dark-color);
+    outline: none;
+}
+input:focus{
+    border-color: var(--dark-color);
+    outline: none;
+}
+textarea:focus{
+    border-color: var(--dark-color);
+    outline: none;
+}
+select:focus{
+    border-color: var(--dark-color);
+    outline: none;
+}
+
+button[type="submit"]{
+    background-color: var(--dark-color);
+    width: 15rem;
+    height: 1.75rem;  
+    border: 2px solid transparent;
+    padding: 4px 8px;
+    margin-top: .75rem;
+    color: var(--light-color);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: .25s ease;
+}
+button[type="submit"]:hover{
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    border: 2px solid var(--light-color);
+}
+
+hr{
+    border: 1px solid var(--dark-color);
+    width: 600px;
+    margin-bottom: 2rem;
+    
+}
